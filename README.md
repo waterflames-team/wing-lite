@@ -16,6 +16,13 @@
 * 对服务器要求更低，只需静态服务器即可
 
 ## 使用
+1. 到本仓库发行版界面下载blog_exhibition.zip或blog_succinct.zip (注：exh版本为单页面版本，suc即双页面版本。详见demo)
+2. 解压
+3. 修改json（见下文）
+3. 上传到服务器
+
+或
+
 1.到本仓库发行版界面下载winglite.js
 (注：exh版本为单页面版本，suc即双页面版本。详见demo)
 
