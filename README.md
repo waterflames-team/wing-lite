@@ -51,9 +51,88 @@ var jsonurl = './config.json';//json解析的url地址
 ```
 修改jsonurl变量赋值的内容即可
 
+5.修改json
+```json
+{
+  "user": "Zhetengtiao",
+  "photo": "https://portrait.gitee.com/uploads/avatars/user/700/2100577_yingbinggan_1584796873.png!avatar30",
+  "introduce": "菜鸡",
+  "word":{
+    "max": "2",
+    "1":{
+      "id": "1",
+      "title": "hello",
+      "date": "20201219",
+      "content": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
+    },
+    "2":{
+      "id": "2",
+      "title": "why wing lite?",
+      "date": "20201219",
+      "content": "# 其实ztt早就有这样的想法了\n### 用js实时生成html语法\n### 让生成不再麻烦！\n### 最主要的是一个静态服务器就可以做出动态界面的效果！！！\n# 生成几乎 ~~有~~ 卡顿！\n```cpp\n hello \n```\n![图标](https://portrait.gitee.com/uploads/avatars/user/700/2100577_yingbinggan_1584796873.png!avatar30)\n"
+    }
+  },
+  "right":{
+    "name": "跳转链接（友情链接也行）",
+    "max": "1",
+    "1": {
+      "id": "1",
+      "name": "非凡小王的真正博客",
+      "from": "https://www.ffxw0720.club"
+    }
+  }
+}
+```
+1. user:用户称呼
+2. photo:头像地址（本地与网络上的均可）
+3. word-max:最大的文章值
+4. word-1\2\3-id:文章id
+5. word-1\2\3-title:文章标题
+6. word-1\2\3-date:文章发表日期
+7. word-1\2\3-from:文章内容（支持markdown）
+8. right-name:跳转区名字
+9. right-max:最大的链接数量
+10. right-1\2\3-id:链接id
+11. right-1\2\3-id:链接名字
+12. right-1\2\3-id:链接跳转地址（本地与网络上的均可）
+### 如何新建文章/友链：
+1. 打开config.json
+2. 复制"1"的那一大个地方,如：
+```json
+"1":{
+    "id": "1",
+    "title": "hello",
+    "date": "20200418",
+    "from": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
+}
+```
+这一大个
+3. 在上一个大括号（右）的的后面加一个英文`,`
+4. 把1，改成上一个数字+1，1+1=2，就把1改成2
+5. 改标题（title）、发布时间（date）、文章对应的md文件名（from）
+6. 最后拼接起来长这样：
+```json
+"1":{
+    "id": "1",
+    "title": "hello",
+    "date": "20200418",
+    "from": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
+},
+"2":{
+    "id": "2",
+    "title": "第二个标题",
+    "date": "时间",
+    "from": "xxxxx"
+}
+```
+
+（注：暂时不支持打开md文件功能，所以内容只能塞进json里面
+由于json不支持换行，所以markdown换行只能使用\n换行符换行）
+
 ## demo
+[blog_exhibition](http://test.zhetengtiao.club:2233/demo/lingkong-wing-lite/blog_exhibition/)
 
-
+[blog_succinct](http://test.zhetengtiao.club:2233/demo/lingkong-wing-lite/blog_succinct/)
 ## 开发者计划
 1. Fork 本仓库
 2. 新建 Feat_xxx 分支

@@ -23,9 +23,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\blog_succinct\default" />
+      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\blog_exhibition\default" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\Lingkong-WingsLite" />
       <recent name="C:\Users\Administrator\Desktop\Lingkong-WingsLite\blog_succinct " />
@@ -41,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608376215217</updated>
       <workItem from="1608376216263" duration="12437000" />
-      <workItem from="1608420143314" duration="7079000" />
+      <workItem from="1608420143314" duration="9359000" />
     </task>
     <servers />
   </component>

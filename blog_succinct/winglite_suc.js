@@ -1,5 +1,5 @@
 /* Powered by Lingkong Team */
-/* Lingkong Wing v0.3-beta.1 */
+/* Lingkong Wing v0.2-beta.1 */
 
 /* ----------------核心算法区 开始---------------- */
 
