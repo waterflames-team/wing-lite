@@ -110,7 +110,7 @@ var jsonurl = './config.json';//json解析的url地址
     "id": "1",
     "title": "hello",
     "date": "20200418",
-    "from": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
+    "content": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
 }
 ```
 这一大个
@@ -118,7 +118,7 @@ var jsonurl = './config.json';//json解析的url地址
 
 4. 把1，改成上一个数字+1，1+1=2，就把1改成2
 
-5. 改标题（title）、发布时间（date）、文章对应的md文件名（from）
+5. 改标题（title）、发布时间（date）、文章内容（content）
 
 6. 最后拼接起来长这样：
 ```json
@@ -126,13 +126,13 @@ var jsonurl = './config.json';//json解析的url地址
     "id": "1",
     "title": "hello",
     "date": "20200418",
-    "from": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
+    "content": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
 },
 "2":{
     "id": "2",
     "title": "第二个标题",
     "date": "时间",
-    "from": "xxxxx"
+    "content": "xxxxx"
 }
 ```
 
