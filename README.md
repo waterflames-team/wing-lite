@@ -115,8 +115,11 @@ var jsonurl = './config.json';//json解析的url地址
 ```
 这一大个
 3. 在上一个大括号（右）的的后面加一个英文`,`
+
 4. 把1，改成上一个数字+1，1+1=2，就把1改成2
+
 5. 改标题（title）、发布时间（date）、文章对应的md文件名（from）
+
 6. 最后拼接起来长这样：
 ```json
 "1":{
@@ -134,6 +137,7 @@ var jsonurl = './config.json';//json解析的url地址
 ```
 
 （注：暂时不支持打开md文件功能，所以内容只能塞进json里面
+
 由于json不支持换行，所以markdown换行只能使用\n换行符换行）
 
 ## demo
