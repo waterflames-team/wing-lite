@@ -5,7 +5,7 @@
 开发，基于JavaScript的在线内容生成系统
 
 相比较于[lingkong-wing内核](https://gitee.com/lingkonggzs/lingkong-wing-kernel/tree/master)
-，它更快，生成速度更快，不用繁琐的上传html文件，只需修改json文件即可。
+，它更轻便，生成速度更快，不用繁琐的上传html文件，只需修改json文件即可。
 
 ## 亮点
 * 更快
@@ -19,7 +19,7 @@
 1. 到本仓库发行版界面下载blog_exhibition.zip或blog_succinct.zip (注：exh版本为单页面版本，suc即双页面版本。详见demo)
 2. 解压
 3. 修改json（见下文）
-3. 上传到服务器
+4. 将解压后的文件上传到服务器
 
 或
 
@@ -34,7 +34,7 @@
 <html>
 <head>
     <title>xxx的博客</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script><!--jquery-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script><!-- jquery 不加会导致生成错误 -->
     <script src="blog_exhibition.js"></script><!-- 主题js -->
     <script src="winglite_exh.js"></script><!-- 主js -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
