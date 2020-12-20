@@ -52,7 +52,9 @@ var jsonurl = './config.json';//json解析的url地址
 修改jsonurl变量赋值的内容即可
 
 ## demo
+[blog_exhibition](http://test.zhetengtiao.club:2233/demo/lingkong-wing-lite/blog_exhibition/)
 
+[blog_succinct](http://test.zhetengtiao.club:2233/demo/lingkong-wing-lite/blog_succinct/)
 
 ## 开发者计划
 1. Fork 本仓库
