@@ -29,36 +29,38 @@
 2.在本仓库内挑选主题
 （注：如果您下载的是exh版本，则需要到文件夹blog_exhibition选择主题。suc一样）
 
-3.新建一个html文件，内容像这样：
+3.新建一个html文件，像这样：
 ```html
 <html>
 <head>
     <title>xxx的博客</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script><!--jquery-->
     <script src="blog_exhibition.js"></script><!-- 主题js -->
-    <script src="winglite_exh.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+    <script src="winglite_exh.js"></script><!-- 主js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- bootstrap css 不加会导致生成错误 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<div id="winglite"></div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<div id="winglite"></div><!-- winglite工作区域，没有这个div是无法工作的 -->
+<!-- jquery 不加会导致生成错误 -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- bootstrap js 不加会导致生成错误 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
 ```
-这里举例的是exh版本，html目录下需要放置刚刚下载的winglite_exh.js和下载的主题js文件
-body中间插入一个div，div id需要设置为winglite
-（注：先导入主题再导入winglite）
+这里举例的是exh版本，请根据自行情况修改主题js和winglite导入路径
 
 4.在你下载的主题js文件里第一行编辑json存放地址
-（注：默认json文件在当前目录下）
 
 像这样：
 ```js
-var jsonurl = './config.json';//json解析的url地址
+var jsonurl = './config.json';//json解析的url地址，这里填的是当前目录下的config.json文件，即"./config.json"
 ```
-修改jsonurl变量赋值的内容即可
 
-5.修改json
+### 修改json
 ```json
 {
   "user": "Zhetengtiao",
@@ -102,7 +104,7 @@ var jsonurl = './config.json';//json解析的url地址
 10. right-1\2\3-id:链接id
 11. right-1\2\3-id:链接名字
 12. right-1\2\3-id:链接跳转地址（本地与网络上的均可）
-### 如何新建文章/友链：
+#### 如何新建文章/友链：
 1. 打开config.json
 2. 复制"1"的那一大个地方,如：
 ```json
