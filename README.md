@@ -14,9 +14,11 @@
 * 无需更改、上传html文件，只需修改json文件
 * 更轻 主体+html总共50kb都不到
 * 对服务器要求更低，只需静态服务器即可
+* 与[lingkong-wing内核](https://gitee.com/lingkonggzs/lingkong-wing-kernel/tree/master)
+的config.json文件兼容
 
 ## 使用
-1. 到本仓库发行版界面下载blog_succinct.zip (注：suc即双页面版本。详见demo)
+1. 到本仓库发行版界面下载blog_suc.zip (注：suc即双页面版本。详见demo)
 2. 解压
 3. 修改json（见下文）
 4. 将解压后的文件上传到服务器
