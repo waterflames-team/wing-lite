@@ -139,7 +139,7 @@ var jsonurl = './config.json';//json解析的url地址，这里填的是当前�
 ```
 
 ## demo
-[blog_exhibition](http://test.zhetengtiao.club:2233/demo/lingkong-wing-lite/demo/)
+[blog_succinct](http://test.zhetengtiao.club:2233/demo/lingkong-wing-lite/demo/)
 ## 开发者计划
 1. Fork 本仓库
 2. 新建 Feat_xxx 分支
