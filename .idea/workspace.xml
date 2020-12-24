@@ -27,20 +27,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog_suc" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\blog_succinct\default" />
-      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\blog_exhibition\default" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\demo" />
+      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\blog_succinct\default" />
       <recent name="C:\Users\Administrator\Desktop\Lingkong-WingsLite" />
       <recent name="C:\Users\Administrator\Desktop\Lingkong-WingsLite\blog_succinct " />
       <recent name="C:\Users\Administrator\Desktop\Lingkong-WingsLite\blog_exhibition" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\blog_succinct\default" />
+      <recent name="C:\Users\Administrator\Desktop\Lingkong-WingLite\blog_exhibition\default" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -59,7 +61,9 @@
       <workItem from="1608641335327" duration="2254000" />
       <workItem from="1608644913356" duration="41000" />
       <workItem from="1608644977953" duration="1652000" />
-      <workItem from="1608810200554" duration="2147000" />
+      <workItem from="1608810200554" duration="3206000" />
+      <workItem from="1608813499763" duration="16000" />
+      <workItem from="1608813736923" duration="27000" />
     </task>
     <servers />
   </component>
@@ -75,6 +79,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="601" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608429868046" />
+    <state x="519" y="254" key="FileChooserDialogImpl" timestamp="1608813513331">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="519" y="254" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608813513331" />
     <state x="286" y="76" key="SettingsEditor" timestamp="1608644853894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

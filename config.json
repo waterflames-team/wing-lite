@@ -8,13 +8,13 @@
       "id": "1",
       "title": "hello",
       "date": "20201219",
-      "content": "../demo/word/1.md"
+      "from": "../demo/word/1.md"
     },
     "2":{
       "id": "2",
       "title": "why wing lite?",
       "date": "20201219",
-      "content": "../demo/word/2.md"
+      "from": "../demo/word/2.md"
     }
   },
   "right":{

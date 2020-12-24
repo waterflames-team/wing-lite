@@ -40,7 +40,7 @@ function make_links_end(URL,name)
     //参数说明：URL链接，name显示标题（全部必填）
     //返回值说明：返回生成好的友情链接结束语句
     //提示：这个东西是循环使用的，即“有多少链接这个就调用多少次”
-    return '<li class="nav-item"><a class="nav-link" href="'+ URL +'"><span data-feather="home"></span>'+ name +'</a></li>';
+    return '<li class="nav-item"><a class="nav-link" href="'+ URL +'"><span data-feather="home"></span>'+ name +'</a></li><br>';
 }
 
 function make_jump_links_begin()

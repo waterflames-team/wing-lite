@@ -74,7 +74,7 @@ else if($_GET["str"]=="blogindex")//文章页面
     var html = make_blogbody_begin(jsonfile.user, jsonfile.photo, jsonfile.introduce);//写入body
     for(var i=1;i<=jsonfile.word.max;i++)//for循环写入文章
     {
-        $.get(jsonfile.word[i].content, function(result) {getmarkdown=result;});
+        $.get(jsonfile.word[i].from, function(result) {getmarkdown=result;});
         html += create_article(jsonfile.word[i].title, marked(getmarkdown), jsonfile.word[i].date, jsonfile.word[i].id);
     }
 
