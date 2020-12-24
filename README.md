@@ -72,13 +72,13 @@ var jsonurl = './config.json';//json解析的url地址，这里填的是当前�
       "id": "1",
       "title": "hello",
       "date": "20201219",
-      "content": "../demo/word/1.md"
+      "from": "../demo/word/1.md"
     },
     "2":{
       "id": "2",
       "title": "why wing lite?",
       "date": "20201219",
-      "content": "../demo/word/2.md"
+      "from": "../demo/word/2.md"
     }
   },
   "right":{
@@ -98,7 +98,7 @@ var jsonurl = './config.json';//json解析的url地址，这里填的是当前�
 4. word-1\2\3-id:文章id
 5. word-1\2\3-title:文章标题
 6. word-1\2\3-date:文章发表日期
-7. word-1\2\3-content:文章链接（支持markdown）
+7. word-1\2\3-from:文章链接
 8. right-name:跳转区名字
 9. right-max:最大的链接数量
 10. right-1\2\3-id:链接id
@@ -112,7 +112,7 @@ var jsonurl = './config.json';//json解析的url地址，这里填的是当前�
       "id": "1",
       "title": "hello",
       "date": "20201219",
-      "content": "../demo/word/1.md"
+      "from": "../demo/word/1.md"
     },
 ```
 这一大个
@@ -128,13 +128,13 @@ var jsonurl = './config.json';//json解析的url地址，这里填的是当前�
       "id": "1",
       "title": "hello",
       "date": "20201219",
-      "content": "../demo/word/1.md"
+      "from": "../demo/word/1.md"
     },
     "2":{
       "id": "2",
       "title": "why wing lite?",
       "date": "20201219",
-      "content": "../demo/word/2.md"
+      "from": "../demo/word/2.md"
     }
 ```
 
