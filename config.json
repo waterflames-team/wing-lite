@@ -8,13 +8,13 @@
       "id": "1",
       "title": "hello",
       "date": "20201219",
-      "content": "# 欢迎使用wing！\n### 你所看到的是wing lite版\n### 更快 更强 更轻\n### 支持`md`，更好用哦！！！\n# 希望你喜欢！"
+      "content": "../demo/word/1.md"
     },
     "2":{
       "id": "2",
       "title": "why wing lite?",
       "date": "20201219",
-      "content": "# 其实ztt早就有这样的想法了\n### 用js实时生成html语法\n### 让生成不再麻烦！\n### 最主要的是一个静态服务器就可以做出动态界面的效果！！！\n# 生成几乎 ~~有~~ 卡顿！\n```cpp\n hello \n```\n![图标](https://portrait.gitee.com/uploads/avatars/user/700/2100577_yingbinggan_1584796873.png!avatar30)\n"
+      "content": "../demo/word/2.md"
     }
   },
   "right":{

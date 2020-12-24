@@ -1,4 +1,4 @@
-var jsonurl = './config.json';//json解析的url地址
+var jsonurl = '../config.json';//json解析的url地址
 
 function make_body_begin(author,headURL,introduce)
 {

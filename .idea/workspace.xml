@@ -11,8 +11,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lsC3nC6hequ2y0VvJDXqS8D6Hu" />
   <component name="ProjectViewState">
@@ -20,10 +24,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -46,7 +52,14 @@
       <option name="presentableId" value="Default" />
       <updated>1608376215217</updated>
       <workItem from="1608376216263" duration="12437000" />
-      <workItem from="1608420143314" duration="9359000" />
+      <workItem from="1608420143314" duration="12064000" />
+      <workItem from="1608548838998" duration="1097000" />
+      <workItem from="1608550261364" duration="521000" />
+      <workItem from="1608553973779" duration="323000" />
+      <workItem from="1608641335327" duration="2254000" />
+      <workItem from="1608644913356" duration="41000" />
+      <workItem from="1608644977953" duration="1652000" />
+      <workItem from="1608810200554" duration="2147000" />
     </task>
     <servers />
   </component>
@@ -54,9 +67,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="532" y="255" key="#Notifications" timestamp="1608644923863">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="532" y="255" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1608644923863" />
     <state x="601" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608429868046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="601" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608429868046" />
+    <state x="286" y="76" key="SettingsEditor" timestamp="1608644853894">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="286" y="76" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608644853894" />
   </component>
 </project>

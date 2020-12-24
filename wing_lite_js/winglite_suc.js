@@ -54,42 +54,46 @@ if($_GET["str"]=="index"||$_GET["str"]==undefined)//首页
 }
 else if($_GET["str"]=="blogindex")//文章页面
 {
-    $.get(jsonurl, function(result) {
-        var jsonfile = result;
-        var rendererMD = new marked.Renderer();
-        marked.setOptions({
-            renderer: rendererMD,
-            gfm: true,
-            tables: true,
-            breaks: false,
-            pedantic: false,
-            sanitize: false,
-            smartLists: true,
-            smartypants: false
-        });
-        var html = make_blogbody_begin(jsonfile.user, jsonfile.photo, jsonfile.introduce);//写入body
-        for(var i=1;i<=jsonfile.word.max;i++)//for循环写入文章
-        {
-            html += create_article(jsonfile.word[i].title, marked(jsonfile.word[i].content), jsonfile.word[i].date, jsonfile.word[i].id);
-        }
-
-        html += make_links_begin(jsonfile.right.name);
-        for(var i=1;i<=jsonfile.right.max;i++)//for循环写入友链
-        {
-            html += make_links_end(jsonfile.right[i].from, jsonfile.right[i].name);
-        }
-
-        html += make_jump_links_begin();
-        for(var i=1;i<=jsonfile.word.max;i++)//for循环写入索引
-        {
-            html += make_jump_links_end(jsonfile.word[i].id, jsonfile.word[i].title);
-        }
-
-        html += make_body_end(jsonfile.user);//收尾
-
-
-        document.getElementById('winglite').innerHTML = html;//写入body
+    document.getElementById('winglite').innerHTML = "<p id='getjsonfile' style='display: none'></p>";
+    var getmarkdown="0";
+    $.ajaxSettings.async = false;
+    $.get(jsonurl, function(result) {document.getElementById('getjsonfile').innerHTML = JSON.stringify(result);});
+    console.log(document.getElementById('getjsonfile').innerText);
+    jsonfile=JSON.parse(document.getElementById('getjsonfile').innerText);
+    var rendererMD = new marked.Renderer();
+    marked.setOptions({
+        renderer: rendererMD,
+        gfm: true,
+        tables: true,
+        breaks: false,
+        pedantic: false,
+        sanitize: false,
+        smartLists: true,
+        smartypants: false
     });
+    var html = make_blogbody_begin(jsonfile.user, jsonfile.photo, jsonfile.introduce);//写入body
+    for(var i=1;i<=jsonfile.word.max;i++)//for循环写入文章
+    {
+        $.get(jsonfile.word[i].content, function(result) {getmarkdown=result;});
+        html += create_article(jsonfile.word[i].title, marked(getmarkdown), jsonfile.word[i].date, jsonfile.word[i].id);
+    }
+
+    html += make_links_begin(jsonfile.right.name);
+    for(var i=1;i<=jsonfile.right.max;i++)//for循环写入友链
+    {
+        html += make_links_end(jsonfile.right[i].from, jsonfile.right[i].name);
+    }
+
+    html += make_jump_links_begin();
+    for(var i=1;i<=jsonfile.word.max;i++)//for循环写入索引
+    {
+        html += make_jump_links_end(jsonfile.word[i].id, jsonfile.word[i].title);
+    }
+
+    html += make_body_end(jsonfile.user);//收尾
+
+
+    document.getElementById('winglite').innerHTML = html;//写入body
 }
 
 /* ----------------核心算法区 结束---------------- */
