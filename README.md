@@ -17,18 +17,6 @@
 * 与[lingkong-wing内核](https://gitee.com/lingkonggzs/lingkong-wing-kernel/tree/master)
 的config.json文件兼容
 
-## 版权声明
-lingkong-wings-lite使用[highlight.js](https://highlightjs.org/)
-作为语法高亮插件，如果您不想使用该插件，请下载0.2版本
-
-使用[marked.js](https://github.com/markedjs/marked)
-来解析markdown。
-
-使用[bootstrap](https://getbootstrap.com/)
-来进行前端内容的实现。
-
-还使用了[jquery](https://jquery.com/)
-。
 
 ## 使用
 1. 到本仓库发行版界面下载blog_suc.zip (注：suc即双页面版本。详见demo)
