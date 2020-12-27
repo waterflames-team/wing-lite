@@ -17,6 +17,19 @@
 * 与[lingkong-wing内核](https://gitee.com/lingkonggzs/lingkong-wing-kernel/tree/master)
 的config.json文件兼容
 
+## 版权声明
+lingkong-wings-lite使用[highlight.js](https://highlightjs.org/)
+作为语法高亮插件，如果您不想使用该插件，请下载0.2版本
+
+使用[marked.js](https://github.com/markedjs/marked)
+来解析markdown。
+
+使用[bootstrap](https://getbootstrap.com/)
+来进行前端内容的实现。
+
+还使用了[jquery](https://jquery.com/)
+。
+
 ## 使用
 1. 到本仓库发行版界面下载blog_suc.zip (注：suc即双页面版本。详见demo)
 2. 解压
@@ -44,8 +57,10 @@
 </head>
 <body>
 <div id="winglite"></div><!-- winglite工作区域，没有这个div是无法工作的 -->
-<script src="../blog_succinct/default/blog_succinct.js"></script><!-- 主题js -->
-<script src="../wing_lite_js/winglite_suc.js"></script><!-- 主js -->
+<link href="https://highlightjs.org/static/demo/styles/github.css" rel="stylesheet">
+<!-- <code>标签高亮 highlight.js主题 -->
+<script src="bootstrap-blue.js"></script><!-- 主题js -->
+<script src="winglite_suc.js"></script><!-- 主js -->
 <!-- jquery 不加会导致生成错误 -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <!-- bootstrap js 不加会导致生成错误 -->
