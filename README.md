@@ -1,7 +1,7 @@
 # lingkong wing lite 
 
 ## 介绍
-灵翼是一个由[灵空团队](https://gitee.com/lingkonggzs) zhetengtiao
+灵翼是一个由[灵空团队](https://gitee.com/lingkonggzs)
 开发，基于JavaScript的在线内容生成系统
 
 相比较于[lingkong-wing内核](https://gitee.com/lingkonggzs/lingkong-wing-kernel/tree/master)
@@ -26,7 +26,7 @@
 
 或
 
-1.到本仓库发行版界面下载winglite.js
+1.到本仓库发行版界面下载winglite_suc.js
 (注：suc即双页面版本。详见demo)
 
 2.在本仓库内挑选主题
