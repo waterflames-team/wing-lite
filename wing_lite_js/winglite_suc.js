@@ -1517,7 +1517,7 @@ var $_GET = (function(){
     }
 })();
 
-if($_GET["str"]=="index"||$_GET["str"]==undefined)//首页
+if($_GET["str"]=="index"&&$_GET["blogid"]==undefined||$_GET["str"]==undefined&&$_GET["blogid"]==undefined)//首页
 {
     $.get(jsonurl, function(result) {
         var jsonfile = result;
@@ -1527,7 +1527,7 @@ if($_GET["str"]=="index"||$_GET["str"]==undefined)//首页
             "<div class=\"card-body\">\n" +
             "    <h5 class=\"card-title\">文章</h5>\n" +
             "    <p class=\"card-text\">查看全部文章</p>\n" +
-            "    <a href=\"index.html?str=blogindex\"class=\"card-link\">跳转——&gt;&gt;</a>\n" +
+            "    <a href=\"?str=blogindex\"class=\"card-link\">跳转——&gt;&gt;</a>\n" +
             "</div></div>";
 
         html += make_links_begin(jsonfile.right.name);
@@ -1542,7 +1542,36 @@ if($_GET["str"]=="index"||$_GET["str"]==undefined)//首页
         document.getElementById('winglite').innerHTML = html;//写入body
     });
 }
-else if($_GET["str"]=="blogindex")//文章页面
+else if($_GET["str"]=="blogindex"&&$_GET["blogid"]==undefined)//文章页面
+{
+    document.getElementById('winglite').innerHTML = "<p id='getjsonfile' style='display: none'></p>";
+    var getmarkdown="0";
+    $.ajaxSettings.async = false;
+    $.get(jsonurl, function(result) {document.getElementById('getjsonfile').innerHTML = JSON.stringify(result);});
+    console.log(document.getElementById('getjsonfile').innerText);
+    jsonfile=JSON.parse(document.getElementById('getjsonfile').innerText);
+    document.getElementById('winglite').innerHTML = "";
+    var html = make_blogbody_begin(jsonfile.user, jsonfile.photo, jsonfile.introduce);//写入body
+    for(var i=1;i<=jsonfile.word.max;i++)//for循环写入文章
+    {
+        $.get(jsonfile.word[i].from, function(result) {getmarkdown=result;});
+        //html += create_article(jsonfile.word[i].title, marked(getmarkdown), jsonfile.word[i].date, jsonfile.word[i].id);
+        html += create_article(jsonfile.word[i].title, getmarkdown.substring(0,25)+"......", jsonfile.word[i].date, jsonfile.word[i].id);
+    }
+
+    html += make_links_begin(jsonfile.right.name);
+    for(var i=1;i<=jsonfile.right.max;i++)//for循环写入友链
+    {
+        html += make_links_end(jsonfile.right[i].from, jsonfile.right[i].name);
+    }
+
+    html += make_body_end(jsonfile.user);//收尾
+
+
+    document.getElementById('winglite').innerHTML = html;//写入body
+    hljs.initHighlighting();
+}
+else if($_GET["blogid"]!=undefined)
 {
     document.getElementById('winglite').innerHTML = "<p id='getjsonfile' style='display: none'></p>";
     var getmarkdown="0";
@@ -1568,22 +1597,22 @@ else if($_GET["str"]=="blogindex")//文章页面
         }
     });
     var html = make_blogbody_begin(jsonfile.user, jsonfile.photo, jsonfile.introduce);//写入body
+    var ifnotfound=0;
     for(var i=1;i<=jsonfile.word.max;i++)//for循环写入文章
     {
         $.get(jsonfile.word[i].from, function(result) {getmarkdown=result;});
-        html += create_article(jsonfile.word[i].title, marked(getmarkdown), jsonfile.word[i].date, jsonfile.word[i].id);
+        //html += create_article(jsonfile.word[i].title, marked(getmarkdown), jsonfile.word[i].date, jsonfile.word[i].id);
+        if(jsonfile.word[i].id==$_GET["blogid"])
+        {
+            ifnotfound=1;
+            html += create_article(jsonfile.word[i].title, marked(getmarkdown), jsonfile.word[i].date, jsonfile.word[i].id);
+        }
     }
-
+    if(ifnotfound==0) html+='<div class="alert alert-danger">错误！我们没有找到这篇博客，将在5s内返回主页</div>'
     html += make_links_begin(jsonfile.right.name);
     for(var i=1;i<=jsonfile.right.max;i++)//for循环写入友链
     {
         html += make_links_end(jsonfile.right[i].from, jsonfile.right[i].name);
-    }
-
-    html += make_jump_links_begin();
-    for(var i=1;i<=jsonfile.word.max;i++)//for循环写入索引
-    {
-        html += make_jump_links_end(jsonfile.word[i].id, jsonfile.word[i].title);
     }
 
     html += make_body_end(jsonfile.user);//收尾
@@ -1591,4 +1620,5 @@ else if($_GET["str"]=="blogindex")//文章页面
 
     document.getElementById('winglite').innerHTML = html;//写入body
     hljs.initHighlighting();
+    if(ifnotfound==0) setTimeout("window.location.href=\"index.html\";", 5000 )
 }
