@@ -1523,12 +1523,12 @@ if($_GET["str"]=="index"&&$_GET["blogid"]==undefined||$_GET["str"]==undefined&&$
         var jsonfile = result;
         var html = make_body_begin(jsonfile.user, jsonfile.photo, jsonfile.introduce);//写入body
 
-        html +="<div class=\"card\">" +
+        html +="<div class=\"container\"><div class=\"card\">" +
             "<div class=\"card-body\">\n" +
             "    <h5 class=\"card-title\">文章</h5>\n" +
             "    <p class=\"card-text\">查看全部文章</p>\n" +
             "    <a href=\"?str=blogindex\"class=\"card-link\">跳转——&gt;&gt;</a>\n" +
-            "</div></div>";
+            "</div></div></div>";
 
         html += make_links_begin(jsonfile.right.name);
         for(var i=1;i<=jsonfile.right.max;i++)//for循环写入友链
